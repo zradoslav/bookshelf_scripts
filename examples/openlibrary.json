@@ -1,0 +1,78 @@
+{
+  "ISBN:0471504394": {
+    "publishers": [
+      {
+        "name": "Interscience Publishers"
+      }
+    ],
+    "pagination": "v. <2   > :",
+    "table_of_contents": [
+      {
+        "title": "v. 2. Partial differential equations / by R. Courant.",
+        "label": "",
+        "pagenum": "",
+        "level": 0
+      }
+    ],
+    "title": "Methods of mathematical physics",
+    "url": "http://openlibrary.org/books/OL2240983M/Methods_of_mathematical_physics",
+    "classifications": {
+      "dewey_decimal_class": [
+        "530.1/5"
+      ],
+      "lc_classifications": [
+        "QA401 .C72413 1989"
+      ]
+    },
+    "notes": "Bibliography: p. v. 2, p. 799-818.\nTranslation of: Methoden der mathematischen Physik.\nIncludes index.",
+    "identifiers": {
+      "lccn": [
+        "89112829"
+      ],
+      "openlibrary": [
+        "OL2240983M"
+      ],
+      "isbn_10": [
+        "0471504394"
+      ],
+      "librarything": [
+        "700764"
+      ],
+      "goodreads": [
+        "3415221"
+      ]
+    },
+    "cover": {
+      "small": "https://covers.openlibrary.org/b/id/305426-S.jpg",
+      "large": "https://covers.openlibrary.org/b/id/305426-L.jpg",
+      "medium": "https://covers.openlibrary.org/b/id/305426-M.jpg"
+    },
+    "subjects": [
+      {
+        "url": "https://openlibrary.org/subjects/mathematical_physics",
+        "name": "Mathematical physics"
+      }
+    ],
+    "publish_date": "1989",
+    "key": "/books/OL2240983M",
+    "authors": [
+      {
+        "url": "http://openlibrary.org/authors/OL68351A/Richard_Courant",
+        "name": "Richard Courant"
+      }
+    ],
+    "by_statement": "by R. Courant and D. Hilbert.",
+    "publish_places": [
+      {
+        "name": "New York"
+      }
+    ],
+    "ebooks": [
+      {
+        "formats": {},
+        "preview_url": "https://archive.org/details/volumemethodsmat00cour",
+        "availability": "restricted"
+      }
+    ]
+  }
+}
