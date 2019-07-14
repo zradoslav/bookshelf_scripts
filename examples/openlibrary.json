@@ -1,77 +1,140 @@
 {
-  "ISBN:0471504394": {
+  "ISBN:9780980200447": {
     "publishers": [
       {
-        "name": "Interscience Publishers"
+        "name": "Litwin Books"
       }
     ],
-    "pagination": "v. <2   > :",
+    "pagination": "80p.",
+    "identifiers": {
+      "google": [
+        "4LQU1YwhY6kC"
+      ],
+      "lccn": [
+        "2008054742"
+      ],
+      "openlibrary": [
+        "OL22853304M"
+      ],
+      "isbn_13": [
+        "9780980200447",
+        "9781936117369"
+      ],
+      "amazon": [
+        "098020044X"
+      ],
+      "isbn_10": [
+        "1936117363"
+      ],
+      "oclc": [
+        "297222669"
+      ],
+      "goodreads": [
+        "6383507"
+      ],
+      "librarything": [
+        "8071257"
+      ]
+    },
     "table_of_contents": [
       {
-        "title": "v. 2. Partial differential equations / by R. Courant.",
+        "title": "The personal nature of slow reading",
+        "label": "",
+        "pagenum": "",
+        "level": 0
+      },
+      {
+        "title": "Slow reading in an information ecology",
+        "label": "",
+        "pagenum": "",
+        "level": 0
+      },
+      {
+        "title": "The slow movement and slow reading",
+        "label": "",
+        "pagenum": "",
+        "level": 0
+      },
+      {
+        "title": "The psychology of slow reading",
+        "label": "",
+        "pagenum": "",
+        "level": 0
+      },
+      {
+        "title": "The practice of slow reading.",
         "label": "",
         "pagenum": "",
         "level": 0
       }
     ],
-    "title": "Methods of mathematical physics",
-    "url": "http://openlibrary.org/books/OL2240983M/Methods_of_mathematical_physics",
+    "links": [
+      {
+        "url": "http://johnmiedema.ca",
+        "title": "Author's Website"
+      },
+      {
+        "url": "http://litwinbooks.com/slowreading-ch2.php",
+        "title": "Chapter 2"
+      },
+      {
+        "url": "http://www.powells.com/biblio/91-9781936117369-0",
+        "title": "Get the e-book"
+      }
+    ],
+    "weight": "1 grams",
+    "title": "Slow reading",
+    "url": "https://openlibrary.org/books/OL22853304M/Slow_reading",
     "classifications": {
       "dewey_decimal_class": [
-        "530.1/5"
+        "028/.9"
       ],
       "lc_classifications": [
-        "QA401 .C72413 1989"
+        "Z1003 .M58 2009"
       ]
     },
-    "notes": "Bibliography: p. v. 2, p. 799-818.\nTranslation of: Methoden der mathematischen Physik.\nIncludes index.",
-    "identifiers": {
-      "lccn": [
-        "89112829"
-      ],
-      "openlibrary": [
-        "OL2240983M"
-      ],
-      "isbn_10": [
-        "0471504394"
-      ],
-      "librarything": [
-        "700764"
-      ],
-      "goodreads": [
-        "3415221"
-      ]
-    },
+    "notes": "Includes bibliographical references and index.",
+    "number_of_pages": 92,
     "cover": {
-      "small": "https://covers.openlibrary.org/b/id/305426-S.jpg",
-      "large": "https://covers.openlibrary.org/b/id/305426-L.jpg",
-      "medium": "https://covers.openlibrary.org/b/id/305426-M.jpg"
+      "small": "https://covers.openlibrary.org/b/id/5546156-S.jpg",
+      "large": "https://covers.openlibrary.org/b/id/5546156-L.jpg",
+      "medium": "https://covers.openlibrary.org/b/id/5546156-M.jpg"
     },
     "subjects": [
       {
-        "url": "https://openlibrary.org/subjects/mathematical_physics",
-        "name": "Mathematical physics"
+        "url": "https://openlibrary.org/subjects/books_and_reading",
+        "name": "Books and reading"
+      },
+      {
+        "url": "https://openlibrary.org/subjects/in_library",
+        "name": "In library"
+      },
+      {
+        "url": "https://openlibrary.org/subjects/reading",
+        "name": "Reading"
       }
     ],
-    "publish_date": "1989",
-    "key": "/books/OL2240983M",
+    "publish_date": "March 2009",
+    "key": "/books/OL22853304M",
     "authors": [
       {
-        "url": "http://openlibrary.org/authors/OL68351A/Richard_Courant",
-        "name": "Richard Courant"
+        "url": "https://openlibrary.org/authors/OL6548935A/John_Miedema",
+        "name": "John Miedema"
       }
     ],
-    "by_statement": "by R. Courant and D. Hilbert.",
+    "by_statement": "by John Miedema.",
     "publish_places": [
       {
-        "name": "New York"
+        "name": "Duluth, Minn"
       }
     ],
     "ebooks": [
       {
+        "checkedout": true,
         "formats": {},
-        "preview_url": "https://archive.org/details/volumemethodsmat00cour",
-        "availability": "restricted"
+        "preview_url": "https://archive.org/details/slowreading00mied",
+        "borrow_url": "https://openlibrary.org/books/OL22853304M/Slow_reading/borrow",
+        "availability": "borrow"
       }
     ]
   }

@@ -1,7 +1,8 @@
 import os, sys, shlex, subprocess
-import json
-from urllib.request import urlopen
 
+from openlibrary_query import isbn_query
+
+# rename file (book) basing on fetched metadata
 
 def confirm(prompt = "Continue"):
     answer = ""
@@ -23,28 +24,6 @@ def choice(variants, prompt):
     return variants[answer]
 
 
-def google_data(isbn):
-    webdata = urlopen(url = 'https://www.googleapis.com/books/v1/volumes?q=isbn:%s' % isbn, timeout = 1000)
-    if not webdata:
-        return {}
-
-    data = {}
-    webdata = json.loads(webdata.read().decode('utf-8'))
-    if not webdata["totalItems"]:
-        return data
-
-    # here 'items' is N-th search hit. now only zeroth used
-    webdata = webdata["items"][0]["volumeInfo"]
-
-    data['authors'] = webdata['authors']
-    data['title'] = webdata['title']
-    data['subtitle'] = webdata.get('subtitle', '')
-    data['publisher'] = webdata.get('publisher', '')
-    data['year'] = webdata.get('publisherDate', '').split('-')[0]
-
-    return data
-
-
 def construct_str(data):
     str = '{} - {}'.format(', '.join(data["authors"]), data["title"])
 
@@ -61,7 +40,7 @@ def construct_str(data):
 
 def routines(filename, isbn):
     isbn = "".join(isbn.split('-'))
-    data    = google_data(isbn)
+    data    = isbn_query(isbn)
     if not data:
         print('FAIL: Google Books fetch failed')
         exit(-1)
@@ -77,9 +56,9 @@ def routines(filename, isbn):
         os.rename(filename, 'done/'+ end_str)
 
 
-def main(filename, n = 4):
+def main(filename, pages = 4):
     extension = filename.split('.')[-1].lower()
-    cmd_str = "isbn_extract -t %s -n %s -f '%s'" % (extension, n, filename)
+    cmd_str = "isbn_extract -t %s -n %s -f '%s'" % (extension, pages, filename)
     cmd_arg = shlex.split(cmd_str)
     output  = subprocess.check_output(cmd_arg).decode("utf-8").splitlines()
     if not output:

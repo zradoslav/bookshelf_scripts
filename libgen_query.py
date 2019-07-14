@@ -19,7 +19,7 @@ def libgen_query(md5hash, fields):
     return data # returns Python dict
 
 
-# libgen API fields - http://libgen.io/json.php
+# LibGen API reference - http://libgen.io/json.php
 
 # id, title, volumeinfo, series, periodical, author, year, edition, publisher, city,
 # pages, pagesInFile, language, topic, library, library_issue,

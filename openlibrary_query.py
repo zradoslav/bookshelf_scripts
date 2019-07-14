@@ -1,28 +1,38 @@
-import sys, json
+import json
 from urllib.request import urlopen
 
+# Open Library API reference -  ttps://openlibrary.org/dev/docs/api/books
 
-def openlibrary_query(isbn):
-    query = 'ISBN:%s'
-    if isinstance(isbn, list):
-        query = query % ',ISBN:'.join(isbn)
-    else:
-        query = query % isbn
-
+def isbn_query(isbn):
     openlibrary_api = 'http://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=%s'
-    data = urlopen(url = openlibrary_api % query, timeout = 1000)
-    data = json.loads(data.read().decode('utf-8'))
+    webdata = urlopen(url = openlibrary_api % isbn)
+    if not webdata:
+        return {}
 
-    return data # returns Python dict
+    webdata = json.loads(webdata.read().decode('utf-8'))
+    if not webdata:
+        return {}
 
+    # access to specific hit
+    webdata = webdata[isbn] or webdata["ISBN:%s" % isbn]
 
-def main():
-    if len(sys.argv) is not 1:
-        data = openlibrary_query(sys.argv[1])
-        print(json.dumps(data, sort_keys=False, indent=4, separators=(',', ': ')))
-    else:
-        sys.exit('Wrong arguments number')
+    data = {}
+    data['authors'] = [x['name'] for x in webdata['authors']]
+    data['title'] = webdata['title']
+    data['subtitle'] = ''
+    data['publisher'] = [x['name'] for x in webdata['publishers']][0] # temp w/a
+    data['year'] = webdata['publish_date']
+    data['pages'] = webdata['number_of_pages']
+    #data['language'] = webdata['language']
 
+    data['identifiers'] = {}
+    data['identifiers']['isbn'] = webdata['identifiers'].get('isbn_10', []) + webdata['identifiers'].get('isbn_13', [])
+    data['identifiers']['lccn'] = webdata['identifiers'].get('lccn', "")
+    data['identifiers']['oclc'] = webdata['identifiers'].get('oclc', []) # may be several
 
-if __name__ == '__main__':
-    main()
+    data['classifications'] = {}
+    data['classifications']['ddc'] = webdata['classifications']['dewey_decimal_class']
+    data['classifications']['lcc'] = webdata['classifications']['lc_classifications']
+
+    return data
+
